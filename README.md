@@ -2,9 +2,7 @@
 
 ## Purpose
 
-The purpose of this repository is to store all the code for your web application. This also includes the history of all commits made and who made them. Only code submitted on the master branch will be graded.
-
-Please follow the instructions below and fill in the information requested when prompted.
+This project is a social media website that allows the user to login, register, comment, view, and post images. The data is stored in MySQL Workbench and the framework used is Node.js.
 
 ## Student Information
 
