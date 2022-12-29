@@ -1,0 +1,12 @@
+<main id = "main-content">
+    <div id = "post-grid">
+        {{#each results}}
+            <div class="cards">
+                <img src="/{{this.thumbnail}}" alt="">
+                <p class="thumbnail-title">{{this.title}}</p>
+                <p class="thumbnail-description">{{this.description}}</p>
+                <a class="thumbnail-link" href="/posts/{{this.id}}">View Details</a>
+            </div>
+        {{/each}}
+    </div>
+</main>

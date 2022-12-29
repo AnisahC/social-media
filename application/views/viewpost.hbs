@@ -1,0 +1,27 @@
+<main>
+    <div class="viewpost">
+        <br>
+        <br>
+        <h5>Title: {{currentPosts.title}}</h5>
+        <br><br>
+        <h5>Description: {{currentPosts.description}}</h5>
+        <br><br>
+        <h5>@{{currentPosts.username}}</h5>
+        <br><br>
+        <h5>{{formatDate currentPosts.createdAt}}</h5>
+        <br><br>
+        <h5><img id="image-container" src="/{{currentPosts.image}}" alt="">
+        </h5>
+    </div>
+    <div class="comment-section">
+        <div class="comment-bar">
+            <textarea id="comment-textbox" placeholder="Don't be mean..."></textarea>
+            <button id="comment-button" data-postid="{{currentPosts.id}}" type="submit"><i class="fas fa-comments"></i></button>
+        </div>
+        <div id="comment-list" class="comments">
+            {{#each currentPosts.comments}}
+                {{> comment this}}
+            {{/each}}
+        </div>
+    </div>
+</main>
