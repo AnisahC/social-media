@@ -1,0 +1,11 @@
+<script src="https://kit.fontawesome.com/6d63acbe94.js" crossorigin="anonymous"></script>    
+<header id="banner"><i class="fas fa-user-circle"></i>MyPhotos
+<br><br>
+    <form class="search-bar" 
+        method="GET"
+        action="/posts/searchpost"
+        enctype="application/x-www-form-urlencoded">
+        <input type="text" placeholder="search for posts" name="searchTerm" value="{{searchValue}}">
+        <button type="submit"><i class="fas fa-search"></i></button>
+    </form>
+</header>

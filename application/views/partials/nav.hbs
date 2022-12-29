@@ -1,0 +1,21 @@
+<script src="https://kit.fontawesome.com/6d63acbe94.js" crossorigin="anonymous"></script>
+<input type="checkbox" id="check">
+<nav>
+    <label for="check">
+        <i class="fas fa-bars" id="button"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <header>Navigation</header>
+        <ul>
+            <li><a href="/"><i class="fas fa-home"></i>home</a></li>
+            {{#if isLoggedIn}}
+                <li><a id="logout-button"><i class="fas fa-users"></i>logout</a></li>
+            {{else}}
+                <li><a href="/login"><i class="fas fa-users"></i>login</a></li>
+            {{/if}}
+            <li><a href="/register"><i class="fas fa-user-plus"></i>register</a></li>
+            <li><a href="/postimage"><i class="fas fa-images"></i>post</a></li>
+        </ul>
+    </div>
+</nav>
