@@ -1,0 +1,321 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+#banner i{
+  margin-right: 10px;
+}
+#banner{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: white;
+  background-color: rgb(64, 66, 88);
+  text-align: center;
+  transition: all 0.5s;
+  font-size: 35px;
+  padding: 22px;
+  border: 1.2px solid white;
+}
+#footer{
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(0, 0, 0);
+  background-color: rgb(167, 167, 167);
+  text-align: center;
+  transition: all 0.5s;
+  font-size: 15px;
+  border: 1px solid black;
+  bottom:0;
+  position: fixed;
+  width: 100%;
+
+}
+#check:checked ~ #banner{
+  margin-left: 250px;
+}
+#check:checked ~ #footer{
+  margin-left: 250px;
+}
+#check:checked ~ form{
+  margin-left: 250px;
+}
+nav{
+  color: rgb(230, 54, 227);
+  text-align: center;
+  font-size: 20px;
+  font-family: fantasy;
+  font-weight: 100;
+}
+ul{
+  color: rgb(230, 54, 227);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  /* text-align: left; */
+  list-style-position:inside;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 15px;
+}
+.sidebar {
+  border: 1px solid black;
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: rgb(80, 87, 122);
+  transition: all 0.5s ease;
+}
+.sidebar header{
+  border: 1.2px solid black;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  line-height: 85px;
+  background: rgb(64, 66, 88);
+  user-select: none;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 60px;
+  font-size: 17px;
+  color: white;
+  padding-left: 0px;
+  box-sizing: border-box;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  transition: .4s;
+}
+ul li:hover a{
+  padding-left: 50px;
+}
+.sidebar ul a i {
+  margin-right: 15px;
+}
+#check {
+  display: none;
+}
+label #button, label #cancel{
+  position: absolute;
+  cursor: pointer;
+  border-radius: 3px;
+}
+label #button{
+  background: rgb(107, 114, 142);
+  border: 1.5px solid black;
+  left: 20px;
+  top: 10px;
+  font-size: 30px;
+  color: white;
+  padding: 2px 4px;
+  transition: all 0.5s;
+}
+label #cancel{
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 15px;
+  color: rgb(135, 7, 7);
+  padding: 4px 6px;
+  transition: all 0.5s ease;
+}
+#check:checked ~ nav .sidebar {
+  left: 0;
+}
+#check:checked ~ nav label #button{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ nav label #cancel{
+  left: 225px;
+  top: 0.5px;
+}
+main{
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 20px;
+}
+footer{
+  color: white;
+  background-color: grey;
+  text-align: center;
+}
+.general{
+  text-align: center;
+  color:rgb(26, 21, 26);
+  border: 1.5px solid white;
+  background-color:rgb(107, 114, 142);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 25px;
+  transition: all 0.5s;
+  height: 100vh;
+
+}
+h5{
+  font-size: 13px;
+  text-align: center;
+  background-color: rgb(71, 78, 104);
+  padding: 15px;
+  border-style: solid;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white;
+}
+.viewpost{
+  background-color: rgb(107, 114, 142)
+}
+#error{
+  color: red;
+}
+#check:checked ~ main{
+  margin-left: 250px;
+}
+main{
+  transition: all 0.5s;
+  background-color: rgb(107, 114, 142);
+  height: 100vh;
+}
+#post-grid{
+   display: grid;
+   width: auto;
+   height: auto;
+   grid-template-rows: [r1] 1fr [r1] 1fr [r1] 1fr;
+   grid-template-columns: [c1] 1fr [c1] 1fr [c1] 1fr;
+}
+#flash-message{
+  position: fixed;
+  right: 15px;
+  top: 20px;
+}
+.fade-in-text {
+  animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+#image-container{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.search-bar{
+  width: 100%;
+  height: 40px;
+  max-width: 100%;
+  background: rgba(255, 255, 255, 0.779);
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+.search-bar input{
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 5px 5px;
+  font-size: 15px;
+  color: black;
+}
+::placeholder{
+  color: rgb(107, 114, 142);
+}
+.search-bar button i{
+  color: gray;
+  width: 50px;
+  font-size: 20px;
+}
+.search-bar button{
+  border: 0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  cursor: pointer;
+}
+.comment-section{
+  background-color: rgb(107, 114, 142);
+  padding-bottom: 25px;
+  padding-top: 15px;
+}
+.comment{
+  padding: 10px 10px;
+}
+.comment-author{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.comment-date{
+  font-size: small;
+}
+.comment-text{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: small;
+}
+.comment-bar{
+  padding-bottom: 25px;
+  padding-top: 15px;
+  width: 100%;
+  height: 40px;
+  max-width: 100%;
+  background: rgba(255, 255, 255, 0.779);
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+.comment-bar textarea{
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 5px 5px;
+  font-size: 15px;
+  color: black;
+}
+.comment-bar button{
+  border: 0;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-color: rgb(107, 114, 142);
+  color: white;
+}
+.thumbnail-title{
+  color: black;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+.thumbnail-description{
+  color: rgb(45, 42, 42);
+  font-size: smaller;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.thumbnail-link{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: smaller;
+}
+
+
